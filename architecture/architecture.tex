@@ -1,0 +1,97 @@
+\documentclass{scrreprt}
+\usepackage{hyperref}
+\usepackage[dutch]{babel}
+\usepackage[demo]{graphicx}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage[tocentry, tablegrid]{vhistory} 
+
+%Remove newpage from chapter
+\makeatletter
+\patchcmd{\scr@startchapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\begin{document}
+	\begin{titlepage}
+		\centering
+		{\scshape\LARGE Architectuur Document \par}
+		\vspace{1cm}
+		{\scshape\Large Team Gamma (C)\par}
+		\vspace{1.5cm}
+		{\huge\bfseries Rekeningrijden\par}
+		\vspace{2cm}
+		{\large\itshape Guus Hamm, Mathijn van Buul, Frank Hartman, Rick Rongen\par}
+		\vfill
+		% Bottom of the page
+		{\large \vhCurrentVersion\par}
+		{\large \vhCurrentDate\par}
+	\end{titlepage}
+	\tableofcontents
+	\newpage
+	\begin{versionhistory}
+		\vhEntry{0.1}{11-04-2017}{RR}{Initieel document}
+	\end{versionhistory}
+
+	\newpage
+	\chapter{Inleiding}
+	\section{Context}
+	\section{Applicatie}
+	\section{Niet-functionele eisen}
+	\section{Doel van dit document}
+	Please tell me!
+	
+	\newpage
+	\chapter{Domein Model}
+	\section{Klassendiagram}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[draft]{class-diagram}
+		\label{pic:class-diagram}
+		\caption{Klassen Diagram}
+	\end{figure}
+	\section{Afbakening}
+	
+	\newpage
+	\chapter{Persistentie}
+	
+	
+	\newpage
+	\chapter{Communicatie}
+	
+	\newpage
+	\chapter{Realisatie niet-functionele eisen}
+	\section{Betrouwbaarheid}
+	\section{Performance}
+	\section{Beveiliging}
+	\section{Schaalbaarheid}
+	
+	\newpage
+	\chapter{Componenten}
+	\section{Componenten Diagram}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[draft]{component-diagram}
+		\label{pic:component-diagram}
+		\caption{Componenten Diagram}
+	\end{figure}
+	\section{Koppeling tussen componenten}
+	\section{Synchronisatie tussen componenten}
+	\section{Services per component}
+	\section{Allocatie van objecten}
+	\section{Remote objecten}
+	\section{Packagestructuur}
+	
+	\newpage
+	\chapter{Deployment}
+	\section{Deploymentdiagram}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[draft]{deployment-diagram}
+		\label{pic:deployment-diagram}
+		\caption{Deployment Diagram}
+	\end{figure}
+	
+	\newpage
+	\chapter{Specificatie van interfaces}
+\end{document}
