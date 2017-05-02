@@ -24,7 +24,7 @@
 		{\large\itshape Guus Hamm, Mathijn van Buul, Frank Hartman, Rick Rongen\par}
 		\vfill
 		% Bottom of the page
-		{\large \vhCurrentVersion\par}
+		{\large v\vhCurrentVersion\par}
 		{\large \vhCurrentDate\par}
 	\end{titlepage}
 	\tableofcontents
@@ -36,20 +36,26 @@
 	\newpage
 	\chapter{Inleiding}
 	\section{Context}
+		De overheid van Groot-Brittannië wil een nieuw stelsel invoeren waar de automobilisten betalen voor de hoeveelheid die zie rijden in plaats van het bezitten van een auto.\par
+		Om dit te verwezenlijken is het team 'Team Gamma' ingeschakeld om dit te realiseren. 
 	\section{Applicatie}
+		De applicatie bestaat uit meerdere componenten die onderling communiceren. Deze zijn verantwoordelijk voor het rapporteren van de gereden kilometers, het verwerken hiervan en maandelijks een factuur sturen naar de gebruiker.
 	\section{Niet-functionele eisen}
+		Het is belangrijk dat minimaal het registratie gedeelte van de applicatie ten alle tijden beschikbaar is. Als dit niet werkt dan kunnen mensen 'gratis' rijden.\par
+		Verder is het belangrijk dat de applicatie accuraat is, 
 	\section{Doel van dit document}
-	Please tell me!
+		Het doel van dit document is om duidelijk het project weer te geven en alle onderdelen uit te leggen. Dit zodat na het doornemen van dit document het duidelijk is hoe het project in elkaar zit en hoe er aan gewerkt kan worden.
 	
 	\newpage
 	\chapter{Domein Model}
 	\section{Klassendiagram}
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[draft]{class-diagram}
-		\label{pic:class-diagram}
-		\caption{Klassen Diagram}
+		\includegraphics[draft]{erd-rekeningrijders}
+		\label{fig:erd}
+		\caption{Entiteiten Relatie Diagram}
 	\end{figure}
+		
 	\section{Afbakening}
 	
 	\newpage
