@@ -60,16 +60,19 @@
 	
 	\newpage
 	\chapter{Persistentie}
-	
-	
+		De persistentie vind plaats door middel van een Postgress database. Deze zal in de productie omgeving met meerdere replicaties werken om de prestatie en redundancy te verbeteren, maar in de productie draait het op een enkele database voor de simpliciteit.\par
+		De authenticatie maakt gebruik van een OpenLDAP server, deze slaat alleen de authenticatie gegevens van de gebruiker op. De wachtwoorden zijn opgeslagen met het SHA algoritme om te zorgen dat wachtwoorden niet uit te lezen zijn.\par
 	\newpage
 	\chapter{Communicatie}
+		De communicatie verloopt via een opgesteld HTTP Rest protocol waarmee alle onderdelen beschikbaar zijn. Op deze gegevens rust echter wel een beveiliging zodat alleen de gebruikers die er recht op hebben deze gegevens kunnen inzien. Deze authenticatie verloopt via HTTP Basic authenticatie.
+		%TODO bescrijving api endpoints
 	
 	\newpage
 	\chapter{Realisatie niet-functionele eisen}
 	\section{Betrouwbaarheid}
 	\section{Performance}
 	\section{Beveiliging}
+		De verbindingen zullen in de productie omgeving beveiligd worden door middel van SSL/TLS. Dit zorgt ervoor dat het praktisch onmogelijk is om als buitenstaander de communicatie af te luisteren.
 	\section{Schaalbaarheid}
 	
 	\newpage
